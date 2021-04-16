@@ -17,10 +17,6 @@ num;
        this.spinner.show();
        this.us.viewOrder(this.userId).subscribe(
         res=>{
-          
-       
-         
-       
           this.orders= res["message"];
           this.spinner.hide();
           let cartnum:[]=this.orders

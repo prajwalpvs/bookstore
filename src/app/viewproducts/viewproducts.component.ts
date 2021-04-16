@@ -26,7 +26,7 @@ bookId:any
         console.log(res["message"])
             this.product=res["message"]
             this.spinner.hide();
-            console.log("viewproduct ts "+this.product)
+            console.log("viewproduct ts ",this.product)
       },
       err=>{
         console.log(err)
@@ -62,8 +62,9 @@ bookId:any
      console.log(product)
      this.us.myOrder(product).subscribe(
        res=>{
-        this.toastr.error('Something went wrong');
+      
          console.log(res["message"])
+         this.toastr.success('added');
         
        },
        err=>{
